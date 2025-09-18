@@ -1,108 +1,71 @@
-<p align="center"><img src="https://assets.khoj.dev/khoj-logo-sideways-1200x540.png" width="230" alt="Khoj Logo"></p>
+Web-Application-Assignment
+Group Project Work (KODES)
 
-<div align="center">
+Group Members
+Pwabasia Benjamin Akwo - 01244281B
+Mbiah Amos Adu - 01241847B
+Kojo Amoako - 01243202B
+Mohammed Abubakar - 01242229B
+Duodu Marvin Kontoh - 01242945B
+ABOUT PROJECT
+This project is a basic calculator web application built using the Flask framework in Python. It provides a simple web interface where users can input two numbers, select an arithmetic operation (Addition, Subtraction, Multiplication, or Division), and get the result displayed on the same page.
 
-[![test](https://github.com/khoj-ai/khoj/actions/workflows/test.yml/badge.svg)](https://github.com/khoj-ai/khoj/actions/workflows/test.yml)
-[![docker](https://github.com/khoj-ai/khoj/actions/workflows/dockerize.yml/badge.svg)](https://github.com/khoj-ai/khoj/pkgs/container/khoj)
-[![pypi](https://github.com/khoj-ai/khoj/actions/workflows/pypi.yml/badge.svg)](https://pypi.org/project/khoj/)
-[![discord](https://img.shields.io/discord/1112065956647284756?style=plastic&label=discord)](https://discord.gg/BDgyabRM6e)
+Objectives
+To build a working calculator accessible via a web browser.
 
-</div>
+To demonstrate Flask integration with HTML for interactive apps.
 
-<div align="center">
-<b>Your AI second brain</b>
-</div>
+To handle basic error cases like invalid input or division by zero.
 
-<br />
+To practice Python web development concepts.
 
-<div align="center">
+Backend Logic (in Python)
+*Handles form submission (POST method).
 
-[📑 Docs](https://docs.khoj.dev)
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-[🌐 Web](https://khoj.dev)
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-[🔥 App](https://app.khoj.dev)
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-[💬 Discord](https://discord.gg/BDgyabRM6e)
-<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-[✍🏽 Blog](https://blog.khoj.dev)
+*Performs operations in Python:
 
-<a href="https://trendshift.io/repositories/10318" target="_blank"><img src="https://trendshift.io/api/badge/repositories/10318" alt="khoj-ai%2Fkhoj | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+*Addition
 
-</div>
+*Subtraction
 
-***
+*Multiplication
 
-### 🎁 New
-* Start any message with `/research` to try out the experimental research mode with Khoj.
-* Anyone can now [create custom agents](https://blog.khoj.dev/posts/create-agents-on-khoj/) with tunable personality, tools and knowledge bases.
-* [Read](https://blog.khoj.dev/posts/evaluate-khoj-quality/) about Khoj's excellent performance on modern retrieval and reasoning benchmarks.
+*Division (with division by zero check)
 
-***
+Error Handling
+Displays "Error: Division by zero" if denominator is 0.
 
-## Overview
+Displays "Invalid input" for incorrect form inputs.
 
-[Khoj](https://khoj.dev) is a personal AI app to extend your capabilities. It smoothly scales up from an on-device personal AI to a cloud-scale enterprise AI.
+Workflow
+User opens the application in a browser (http://127.0.0.1:5000).
 
-- Chat with any local or online LLM (e.g llama3, qwen, gemma, mistral, gpt, claude, gemini, deepseek).
-- Get answers from the internet and your docs (including image, pdf, markdown, org-mode, word, notion files).
-- Access it from your Browser, Obsidian, Emacs, Desktop, Phone or Whatsapp.
-- Create agents with custom knowledge, persona, chat model and tools to take on any role.
-- Automate away repetitive research. Get personal newsletters and smart notifications delivered to your inbox.
-- Find relevant docs quickly and easily using our advanced semantic search.
-- Generate images, talk out loud, play your messages.
-- Khoj is open-source, self-hostable. Always.
-- Run it privately on [your computer](https://docs.khoj.dev/get-started/setup) or try it on our [cloud app](https://app.khoj.dev).
+User enters two numbers and selects an operation.
 
-***
+Flask receives the input (via POST) and computes the result.
 
-## See it in action
+The result is displayed on the same page.
 
-![demo_chat](https://github.com/khoj-ai/khoj/blob/master/documentation/assets/img/quadratic_equation_khoj_web.gif?raw=true)
+If input is invalid or division by zero occurs, an error message is shown.
 
-Go to https://app.khoj.dev to see Khoj live.
+Example Usage
+Input: 12 ÷ 4
 
-## Full feature list
-You can see the full feature list [here](https://docs.khoj.dev/category/features).
+Output: Result: 3.0
 
-## Self-Host
+Input: 7 - 2
 
-To get started with self-hosting Khoj, [read the docs](https://docs.khoj.dev/get-started/setup).
+Output: Result: 5.0
 
-## Enterprise
+Input: 10 ÷ 0
 
-Khoj is available as a cloud service, on-premises, or as a hybrid solution. To learn more about Khoj Enterprise, [visit our website](https://khoj.dev/teams).
+Output: Error: Division by zero
 
-## Frequently Asked Questions (FAQ)
+Strengths of the Project
+*Simple and easy-to-use calculator.
 
-Q: Can I use Khoj without self-hosting?
+*Fully implemented in Python + Flask.
 
-Yes! You can use Khoj right away at [https://app.khoj.dev](https://app.khoj.dev) — no setup required.
+*Demonstrates form handling and dynamic HTML rendering.
 
-Q: What kinds of documents can Khoj read?
-
-Khoj supports a wide variety: PDFs, Markdown, Notion, Word docs, org-mode files, and more.
-
-Q: How can I make my own agent?
-
-Check out [this blog post](https://blog.khoj.dev/posts/create-agents-on-khoj/) for a step-by-step guide to custom agents.
-For more questions, head over to our [Discord](https://discord.gg/BDgyabRM6e)!
-
-
-## Contributors
-Cheers to our awesome contributors! 🎉
-
-<a href="https://github.com/khoj-ai/khoj/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=khoj-ai/khoj" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
-
-### Interested in Contributing?
-Khoj is open source. It is sustained by the community and we’d love for you to join it! Whether you’re a coder, designer, writer, or enthusiast, there’s a place for you.
-
-Why Contribute?
-- Make an Impact: Help build, test and improve a tool used by thousands to boost productivity.
-- Learn & Grow: Work on cutting-edge AI, LLMs, and semantic search technologies.
-
-You can help us build new features, improve the project documentation, report issues and fix bugs. If you're a developer, please see our [Contributing Guidelines](https://docs.khoj.dev/contributing/development) and check out [good first issues](https://github.com/khoj-ai/khoj/contribute) to work on.
+*Includes error handling for robustness.
